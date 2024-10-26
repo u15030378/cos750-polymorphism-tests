@@ -10,17 +10,6 @@ The project can be built using maven.
 mvn clean package
 ```
 
-The above command will create an executable `.jar` file that can be run from the command line:
-```bash
-java -jar target/polymorphism-0.0.1-SNAPSHOT.jar 
-```
-
-Running the application from the IDE or command line **should** result in the same output:
-
-<img src="assets/images/Spring-boot-output.png" alt="Spring boot output" width="1000"/>
-
->If you see the above output, YOU'RE GOOD TO GO! 
-
 ## Project structure
 
 ---
@@ -47,7 +36,12 @@ Running the application from the IDE or command line **should** result in the sa
 6. Do the same for the rest of the test cases that are commented out.
 
 ## Submission
-
+1. Create a new branch in your repository called `<your name>/polymorphism`.
+2. Commit your changes to the new branch.
+3. Push the branch to your repository.
+4. Create a pull request from your branch to the main branch.
+5. Add your instructor as a reviewer to the pull request.
+6. Deadline for submission is 01/01/2025.
 
 ## Troubleshooting
 When compiling or running the application on a java version other than v11, you will receive the following error: 
