@@ -1,8 +1,16 @@
 package polymorphism.vehicles;
 
-public class Truck extends Vehicle{
+public class Truck extends Vehicle {
+
+    public Truck() {
+        super("Truck");
+    }
+
     @Override
     public String drive() {
-        return "Revving up a big 12l diesel engine... Vroom Vroom!";
+        if (hasAcceleratorPedal()) {
+            return "Revving up a big 12l diesel engine... Vroom Vroom!";
+        }
+        return "This vehicle cannot drive. It has no accelerator pedal.";
     }
 }

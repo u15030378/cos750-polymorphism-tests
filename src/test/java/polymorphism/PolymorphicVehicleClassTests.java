@@ -14,13 +14,14 @@ class PolymorphicVehicleClassTests {
     void driveTruckShouldProduceCorrectOutput() {
         // Arrange
         Vehicle vehicle = new Truck();
+        Driver truckDriver = new Driver(true, true);
 
         // Act
-        String output = vehicle.drive();
-        System.out.println(output);
+        String vehicleSound = truckDriver.driveToCapeTown(vehicle);
+        System.out.println(vehicleSound);
 
         // Assert
-        assertEquals("Revving up a big 12l diesel engine... Vroom Vroom!", output);
+        assertEquals("Revving up a big 12l diesel engine... Vroom Vroom!", vehicleSound);
     }
 
 
@@ -29,9 +30,10 @@ class PolymorphicVehicleClassTests {
     void driveCarShouldProduceCorrectOutput() {
         // Arrange
         Vehicle vehicle = new Car();
+        Driver carDriver = new Driver(true, false);
 
         // Act
-        String output = vehicle.drive();
+        String output = carDriver.driveToCapeTown(vehicle);
         System.out.println(output);
 
         // Assert
@@ -39,25 +41,27 @@ class PolymorphicVehicleClassTests {
     }
 
     @Test
-    void driveMotorcycleShouldProduceCorrectOutput() {
+    void driveBakkieShouldProduceCorrectOutput() {
         // Arrange
-        Vehicle vehicle = new Motorcycle();
+        Vehicle vehicle = new Bakkie();
+        Driver bakkieDriver = new Driver(true, true);
 
         // Act
-        String output = vehicle.drive();
+        String output = bakkieDriver.driveToCapeTown(vehicle);
         System.out.println(output);
 
         // Assert
-        assertEquals("Revving up a small 0.5l petrol engine... Vroom Vroom!", output);
+        assertEquals("Revving up a 3.2l turbo diesel engine... Vroom Vroom!", output);
     }
 
     @Test
     void driveFormulaOneCar() {
         // Arrange
         Vehicle vehicle = new FormulaOneCar();
+        Driver madMan = new Driver(true, false);
 
         // Act
-        String output = vehicle.drive();
+        String output = madMan.driveToCapeTown(vehicle);
         System.out.println(output);
 
         // Assert
